@@ -49,3 +49,16 @@ Da um nome para o container.
 
   `docker exec -it meu-nginx bash`
 Abre o bash no container que chamamos de meu-nginx.
+
+`docker run --name meu-nginx -d -p 8080:80 -v "$(pwd)"/html:/usr/share/nginx/html nginx`
+Cria um container mapeando um volume para a pasta local.
+
+```
+docker run -d \
+  -it \
+  -p 8080:80 \
+  --name meu-nginx \
+  --mount type=bind,source="$(pwd)"/html,target=/usr/share/nginx/html \
+  nginx
+```
+Usando o mount para mapear o volume.
