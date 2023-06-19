@@ -108,3 +108,6 @@ Acessando a imagem criada.
 
 `docker rm $(docker ps -a -q) -f`
 Deletar todos os containeres de uma vez.
+
+`docker push luanpartes/nginx-vai`
+Publicando uma imagem no docker hub.

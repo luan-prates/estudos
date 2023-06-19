@@ -1,7 +1,7 @@
-FROM ubuntu:latest
+FROM nginx:latest
 
-#Esse comando é fixo
-ENTRYPOINT [ "echo", "Oi" ]
+COPY html /usr/share/nginx/html
 
-#Esse é variavel
-CMD [ "Luan!" ]
+ENTRYPOINT [ "/docker-entrypoint.sh" ]
+
+CMD [ "nginx","-g", "daemon off;" ]
