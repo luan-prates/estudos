@@ -105,3 +105,6 @@ Lista as imagens
 
 `docker run -it luanpartes/nginx-com-vim2 bash`
 Acessando a imagem criada.
+
+`docker rm $(docker ps -a -q) -f`
+Deletar todos os containeres de uma vez.

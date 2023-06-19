@@ -1,8 +1,7 @@
-FROM nginx:latest
+FROM ubuntu:latest
 
-WORKDIR /app
+#Esse comando é fixo
+ENTRYPOINT [ "echo", "Oi" ]
 
-RUN apt update && \
- apt install vim -y
-
-COPY html /usr/share/nginx/html
+#Esse é variavel
+CMD [ "Luan!" ]
