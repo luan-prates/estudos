@@ -94,3 +94,14 @@ Também podemos usar o -v.
 
 `docker volume prune`
 Limpa os volumes que não estão sendo utilizados.
+
+##### Criando Imagens
+
+`docker build -t luanpartes/nginx-com-vim2:latest .`
+Criando uma imagem.
+
+`docker images`
+Lista as imagens 
+
+`docker run -it luanpartes/nginx-com-vim2 bash`
+Acessando a imagem criada.
