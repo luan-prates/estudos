@@ -62,3 +62,35 @@ docker run -d \
   nginx
 ```
 Usando o mount para mapear o volume.
+
+##### Volumes
+
+`docker volume ls`
+Lista os volumes existentes.
+
+`docker volume create meuvolume`
+Cria um volume.
+
+`docker volume inspect meuvolume`
+Inspeciona um volume.
+
+```
+docker run \
+-d \
+--name meu-nginx \
+--mount type=volume,source=meuvolume,target=/app \
+nginx 
+```
+Monta o volume criado.
+
+```
+docker run \                   
+-d \
+--name meu-nginx3 \
+-v meuvolume:/app \                               
+nginx
+```
+Também podemos usar o -v.
+
+`docker volume prune`
+Limpa os volumes que não estão sendo utilizados.
