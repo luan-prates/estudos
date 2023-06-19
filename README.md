@@ -43,3 +43,9 @@ Remove o container.
 
   `docker rm + id_container + -f`
 Remove o container mesmo se estiver em execução.
+
+  `docker run -d --name meu_nginx nginx`
+Da um nome para o container.
+
+  `docker exec -it meu-nginx bash`
+Abre o bash no container que chamamos de meu-nginx.
