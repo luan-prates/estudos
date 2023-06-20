@@ -111,3 +111,24 @@ Deletar todos os containeres de uma vez.
 
 `docker push luanpartes/nginx-vai`
 Publicando uma imagem no docker hub.
+
+##### Network
+
+tipos:
+- bridge (padrão)
+- host (mescla a rede do docker com a do host.)
+- overlay (comunica containeres de hosts diferentes, usado com swarm)
+- none (sem rede)
+
+`docker network ls`
+Lista as redes
+
+`docker network prune`
+Remove todas as redes não usadas.
+
+
+`docker network create --driver bridge minharede`
+cria uma rede 
+
+`docker network connect minharede ubuntu3`
+adicina uma maquina a rede 
