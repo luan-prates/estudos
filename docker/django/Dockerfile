@@ -1,6 +1,6 @@
 FROM python:3
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
 RUN pip install Django==4.2.2
 
