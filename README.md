@@ -139,3 +139,6 @@ Adicina o nginx na rede host
 
 `curl http://host.docker.internal:8000`
 Acessando um serviço na maquina host.
+
+`docker run --rm -it -v $(pwd)/:/usr/src/app -p 3000:3000 node:15 bash`
+Usando o node do container pra codar.
