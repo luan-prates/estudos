@@ -135,3 +135,7 @@ adicina uma maquina a rede
 
 `docker run -dit --name nginx-local --network host nginx`
 Adicina o nginx na rede host 
+
+
+`curl http://host.docker.internal:8000`
+Acessando um serviço na maquina host.
