@@ -132,3 +132,6 @@ cria uma rede
 
 `docker network connect minharede ubuntu3`
 adicina uma maquina a rede 
+
+`docker run -dit --name nginx-local --network host nginx`
+Adicina o nginx na rede host 
