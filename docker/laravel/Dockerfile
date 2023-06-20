@@ -1,6 +1,5 @@
 FROM php:7.4-cli
 
-
 WORKDIR /var/www
 
 RUN apt update && \
@@ -12,8 +11,6 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" &&
     php -r "unlink('composer-setup.php');"
 
 RUN php composer.phar create-project laravel/laravel laravel
-
-
 
 ENTRYPOINT [ "php", "laravel/artisan","serve" ]
 
