@@ -142,3 +142,6 @@ Acessando um serviço na maquina host.
 
 `docker run --rm -it -v $(pwd)/:/usr/src/app -p 3000:3000 node:15 bash`
 Usando o node do container pra codar.
+
+`docker build -t luanpartes/node-app:latest . -f Dockerfile.prod`
+Gerando o build a partir do dockerfile.prod
