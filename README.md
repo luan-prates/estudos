@@ -151,4 +151,8 @@ Gerando um build de prod Otimizado com Multistage Building
 
 `docker build -t luanpartes/nginx:laravel . -f Dockerfile.laravel `
 
-``
+Trabalhando com docker compose
+`docker compose up -d`
+`docker compose up -d --build`
+`docker compose ps `
+`docker compose down`
