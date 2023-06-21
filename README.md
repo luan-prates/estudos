@@ -148,3 +148,7 @@ Gerando o build a partir do dockerfile.prod
 
 `docker build -t luanpartes/laravel-app:prod . -f Dockerfile.prod`
 Gerando um build de prod Otimizado com Multistage Building
+
+`docker build -t luanpartes/nginx:laravel . -f Dockerfile.laravel `
+
+``
