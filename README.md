@@ -145,3 +145,6 @@ Usando o node do container pra codar.
 
 `docker build -t luanpartes/node-app:latest . -f Dockerfile.prod`
 Gerando o build a partir do dockerfile.prod
+
+`docker build -t luanpartes/laravel-app:prod . -f Dockerfile.prod`
+Gerando um build de prod Otimizado com Multistage Building
