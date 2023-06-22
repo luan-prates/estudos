@@ -5,7 +5,8 @@ Um [tutorial de Markdown](https://www.w3schools.io/file/markdown-introduction/) 
 
 Vou iniciar pelo FullCycle
 ###- Docker 
-  #### Comandos 
+#### Iniciando com docker
+  ##### Comandos 
   `docker run hello-world`
 Roda uma imagem que imprime a mensaguem Hello from Docker!
 
@@ -95,7 +96,7 @@ Também podemos usar o -v.
 `docker volume prune`
 Limpa os volumes que não estão sendo utilizados.
 
-##### Criando Imagens
+#### Trabalhando com Imagens
 
 `docker build -t luanpartes/nginx-com-vim2:latest .`
 Criando uma imagem.
@@ -112,7 +113,7 @@ Deletar todos os containeres de uma vez.
 `docker push luanpartes/nginx-vai`
 Publicando uma imagem no docker hub.
 
-##### Network
+#### Networks
 
 tipos:
 - bridge (padrão)
@@ -140,17 +141,23 @@ Adicina o nginx na rede host
 `curl http://host.docker.internal:8000`
 Acessando um serviço na maquina host.
 
+
+#### Colocando em prática 
 `docker run --rm -it -v $(pwd)/:/usr/src/app -p 3000:3000 node:15 bash`
 Usando o node do container pra codar.
 
 `docker build -t luanpartes/node-app:latest . -f Dockerfile.prod`
 Gerando o build a partir do dockerfile.prod
 
+
+#### Otimizando imagens 
 `docker build -t luanpartes/laravel-app:prod . -f Dockerfile.prod`
 Gerando um build de prod Otimizado com Multistage Building
 
 `docker build -t luanpartes/nginx:laravel . -f Dockerfile.laravel `
 
+
+#### Docker compose
 Trabalhando com docker compose
 `docker compose up -d`
 `docker compose up -d --build`
